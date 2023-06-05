@@ -122,13 +122,17 @@ function renderLicenseSection(license) {
   return `[![License](${ renderLicenseBadge(license)}) ](${renderLicenseLink(license)})`
 }
 
+function technologyUsed(data){
+  const technologies=data.technology;
+ 
+  return technologies.join(', ');
+  
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   console.log(data);
   console.log(data.license);
-  
-  //renderLicenseSection(data)
-  
   
   return `
   # ${data.title}
@@ -138,6 +142,7 @@ function generateMarkdown(data) {
 
   ## Table of Content
   - [Description](#description)
+  - [Technology Used](#technology)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
@@ -146,6 +151,8 @@ function generateMarkdown(data) {
 
   ## Description
   ${data.description}
+  ## Technology Used
+  ${technologyUsed(data)}
   ## Installation
   ${data.installation}
   ## Usage 

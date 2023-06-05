@@ -20,6 +20,12 @@ const questions = [
         name: 'description',
       },
       {
+        type: 'checkbox',
+        message: 'technology used:',
+        choices: ['HTML','CSS','JavaScript', 'JQuery', 'Bootstrap', 'Web API', 'NodeJS', 'Inquirer v8.2.4'],
+        name: 'technology',
+      },
+      {
         type: 'input',
         message: 'Installation: please, provide the information about the project installation',
         name: 'installation',
@@ -54,13 +60,6 @@ const questions = [
 
   
 ];
-
-
-
-
-
-    
-
 
 
 // TODO: Create a function to write README file

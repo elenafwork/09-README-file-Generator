@@ -18,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/elenafwork/09-README-file-Generator/issues"
   },
-  "homepage": "https://github.com/elenafwork/09-README-file-Generator#readme"
+  "homepage": "https://github.com/elenafwork/09-README-file-Generator#readme",
+  "devDependencies": {}
 }

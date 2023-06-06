@@ -1,3 +1,4 @@
+
   # README File Generator
    
   
@@ -13,15 +14,15 @@
   - [Questions](#questions)
 
   ## Description
-  It generates the professional looking README file
+  It generates professional looking README file.
   ## Technology Used
   JavaScript, NodeJS, Inquirer v8.2.4
   ## Installation
-  Open terminal and type  ``` node index.js```
+  Open terminal and type ```node index.js```
   ## Usage 
-  Answer the questions and get the result
+  Answer the questions and it is ready!
   ## Credits
-  GitHub Docs, GitHub licenses repo https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+  GitHub Docs, GitHub License badge repo 
   ## License
   The project does not have a License
  

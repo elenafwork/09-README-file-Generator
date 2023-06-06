@@ -1,9 +1,5 @@
 const licenses=[
-  { 
-    name: 'None',
-    badgeLink: ' ',
-    link: ' '
-  },
+ 
   {
     name: 'Apace License 2.0',
     badgeLink: 'https://img.shields.io/badge/License-Apache_2.0-blue.svg ',
@@ -91,11 +87,13 @@ const licenses=[
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  
   for(const element of licenses ){
-    if(element.name==license){
-      console.log(element.badgeLink);
+   if (license=='None'){
+    return ' '
+   }else if(element.name== license){
       
-      return element.badgeLink
+      return `[![License](${element.badgeLink})](${element.link})`
     }
   }
 
@@ -104,41 +102,53 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+ 
   for(const element of licenses ){
-    if(element.name==license){
-      console.log(element.link);
-      return element.link
+    
+    if (license=='None'){
+      
+      return ' ';
+     }else if(element.name== license){
+        
+        return element.link;
+      }
     }
-  }
+   
+  
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  renderLicenseBadge(license);
-  renderLicenseLink(license);
-  console.log(` [![License](${ renderLicenseBadge(license)}) ](${renderLicenseLink(license)}) `);
-  
-  return `[![License](${ renderLicenseBadge(license)}) ](${renderLicenseLink(license)})`
+  renderLicenseLink(license)
+ 
+ 
+  if (license=='None'){
+    return 'The project does not have a License'
+  } else{
+   return `Licensed under [${license} ](${renderLicenseLink(license)})`
+  }
 }
+
+
+
+
 
 function technologyUsed(data){
   const technologies=data.technology;
- 
+  
   return technologies.join(', ');
   
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  console.log(data);
-  console.log(data.license);
-  
+    
   return `
   # ${data.title}
-
-  ## Licenses
-  ${renderLicenseSection(data.license)}
+   
+  
+  ${renderLicenseBadge(data.license)}
 
   ## Table of Content
   - [Description](#description)
@@ -159,6 +169,8 @@ function generateMarkdown(data) {
   ${data.usage}
   ## Credits
   ${data.credits}
+  ## License
+  ${renderLicenseSection(data.license)}
  
   ## Questions
   If you have any questions regarding the project, please, feel free to contact me:

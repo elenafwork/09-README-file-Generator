@@ -77,10 +77,7 @@ function init() {
 .prompt(questions)
 .then((data)=> {
     console.log('Thank you!');
-    
-    console.log(data);
-    console.log(data.title);
-       
+              
     writeToFile("./README-sample.md", generateMarkdown(data));
         
      

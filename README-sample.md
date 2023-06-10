@@ -1,5 +1,5 @@
 
-  # README File Generator
+  # lmkmlk
    
   
    
@@ -10,25 +10,31 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
+  - [Tests](#tests)
   - [License](#license)
   - [Questions](#questions)
 
   ## Description
-  It generates professional looking README file.
+  hbkhbkj
   ## Technology Used
-  JavaScript, NodeJS, Inquirer v8.2.4
+  - HTML, 
+ - CSS, 
+ - JavaScript, 
+ - JQuery
   ## Installation
-  Open terminal and type ```node index.js```
+  jnljnlk
   ## Usage 
-  Answer the questions and it is ready!
+  kbkjkjbkj
   ## Credits
-  GitHub Docs, GitHub License badge repo 
+  hbkjbkjbkj
+  ## Tests
+  hbkbjkbj
   ## License
   The project does not have a License
  
   ## Questions
   If you have any questions regarding the project, please, feel free to contact me:
-  - GitHub: [elenafwork](https://github/elenafwork)
-  - Email: <elenaf.work@gmail.com>
+  - GitHub: [jbkjbkjb](https://github/jbkjbkjb)
+  - Email: <jbkjbkj@kjnl>
 
 

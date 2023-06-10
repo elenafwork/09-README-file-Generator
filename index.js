@@ -1,12 +1,12 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const fs=require('fs');
 const inquirer=require('inquirer')
 const generateMarkdown=require('./utils/generateMarkdown.js')
-// TODO: Create an array of questions for user input
+
 console.log('Hello. Welcome to README File Generator! ');
 console.log('Please, answer the following questions for the successful result!');
 
-
+// prompt questions for README file content
 const questions = [
     {
         type: 'input',
@@ -42,6 +42,11 @@ const questions = [
         name: 'credits',
       },
       {
+        type: 'input',
+        message: 'Tests: please, provide the information about the possible project tests',
+        name: 'tests',
+      },
+      {
         type: 'list',
         message: 'License: please, provide the information about license',
         choices: ['None', 'Apace License 2.0', 'GNU General Public License v3.0','MIT License', 'BSD 2-Clause "Simplified" License', 'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0', 'Eclipse Public License 2.0', 'GNU Affero Public License v3.0','GNU General Public License v2.0', 'GNU Lesser General Public License v2.1', 'Mozilla Public License 2.0','The Unlicense' ],
@@ -62,7 +67,7 @@ const questions = [
 ];
 
 
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (error) =>{
         error ? console.error(error)
@@ -71,7 +76,7 @@ function writeToFile(fileName, data) {
     })
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     inquirer
 .prompt(questions)

@@ -1,3 +1,4 @@
+// array of licenses
 const licenses=[
  
   {
@@ -84,7 +85,7 @@ const licenses=[
 ]
 
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+//function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   
@@ -99,7 +100,7 @@ function renderLicenseBadge(license) {
 
 }
 
-// TODO: Create a function that returns the license link
+// function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
  
@@ -117,7 +118,7 @@ function renderLicenseLink(license) {
   
 }
 
-// TODO: Create a function that returns the license section of README
+// function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   renderLicenseLink(license)
@@ -137,11 +138,11 @@ function renderLicenseSection(license) {
 function technologyUsed(data){
   const technologies=data.technology;
   
-  return technologies.join(', ');
+  return technologies.join(', \r\n - ');
   
 }
 
-// TODO: Create a function to generate markdown for README
+// function for  generating markdown for README
 function generateMarkdown(data) {
     
   return `
@@ -156,19 +157,22 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
+  - [Tests](#tests)
   - [License](#license)
   - [Questions](#questions)
 
   ## Description
   ${data.description}
   ## Technology Used
-  ${technologyUsed(data)}
+  - ${technologyUsed(data)}
   ## Installation
   ${data.installation}
   ## Usage 
   ${data.usage}
   ## Credits
   ${data.credits}
+  ## Tests
+  ${data.tests}
   ## License
   ${renderLicenseSection(data.license)}
  
